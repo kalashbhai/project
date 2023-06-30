@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interest Assessment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+    }
+    
+    .question {
+      margin-bottom: 10px;
+    }
+    
+    .options {
+      margin-bottom: 20px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    #result {
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interest Assessment</h1>
+  
+  <div class="question" id="question1">
+    <p>1. What subjects do you enjoy the most in your current classes?</p>
+    <div class="options">
+      <label><input type="checkbox" name="subjects" value="mathematics"> Mathematics</label><br>
+      <label><input type="checkbox" name="subjects" value="science"> Science</label><br>
+      <label><input type="checkbox" name="subjects" value="english"> English</label><br>
+      <label><input type="checkbox" name="subjects" value="socialstudies"> Social Studies</label><br>
+      <label><input type="checkbox" name="subjects" value="computerscience"> Computer Science</label><br>
+      <label><input type="checkbox" name="subjects" value="physicaleducation"> Physical Education</label><br>
+    </div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="question2">
+    <p>2. Which activities or hobbies are you most passionate about outside of school?</p>
+    <div class="options">
+        <label><input type="checkbox" name="subjects" value="Sports">Sports (Football, Basketball, Cricket, Tennis, etc.)</label><br>
+        <label><input type="checkbox" name="subjects" value="Music">Music (Playing an instrument, singing, composing)</label><br>
+        <label><input type="checkbox" name="subjects" value="Art">Art (Drawing, painting, sculpting)</label><br>
+        <label><input type="checkbox" name="subjects" value="Writing">Writing (Poetry, short stories, blogging)</label><br>
+        <label><input type="checkbox" name="subjects" value="Debate">Debate or Public Speaking</label><br>
+        <label><input type="checkbox" name="subjects" value="Service">Volunteering or community service</label><br>
+    </div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="question3">
+    <p>3. Do you prefer working with your hands or working with ideas and concepts?</p>
+    <div class="options">
+        <label><input type="checkbox" name="subjects" value="">Working with hands: Engineering, Carpentry, Fashion Designing, Culinary Arts, Automotive Technology, Horticulture</label><br>
+        <label><input type="checkbox" name="subjects" value="">Working with ideas and concepts: Science Research, Mathematics, Architecture, Journalism, Psychology, Software Development</label><br>
+    </div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="question4">
+    <p>4. Are you interested in solving mathematical problems and equations?</p>
+    <div class="options">
+        <label><input type="checkbox" name="subjects" value="">Engineering (Civil, Mechanical, Electrical)</label><br>
+        <label><input type="checkbox" name="subjects" value="">Mathematics (Pure Mathematics, Applied Mathematics)</label><br>
+        <label><input type="checkbox" name="subjects" value="">Economics and Finance</label><br>
+        <label><input type="checkbox" name="subjects" value="">Statistics and Data Analysis</label><br>
+        <label><input type="checkbox" name="subjects" value="">Actuarial Science</label><br>
+        <label><input type="checkbox" name="subjects" value="">Computer Science</label><br>
+    </div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="question5">
+    <p>5. Do you enjoy conducting experiments and exploring scientific concepts?</p>
+    <div class="options">
+        <label><input type="checkbox" name="subjects" value="">Medicine and Healthcare</label><br>
+        <label><input type="checkbox" name="subjects" value="">Biotechnology and Genetics</label><br>
+        <label><input type="checkbox" name="subjects" value="">Environmental Science</label><br>
+        <label><input type="checkbox" name="subjects" value="">Pharmacy</label><br>
+        <label><input type="checkbox" name="subjects" value="">Forensic Science</label><br>
+        <label><input type="checkbox" name="subjects" value="">Agricultural Sciences</label><br>
+    </div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="question6">
+    <p>6. Are you drawn to creative arts such as drawing, painting, or playing a musical instrument?</p>
+    <div class="options">
+        <label><input type="checkbox" name="subjects" value="">Fine Arts (Painting, Sculpture, Graphic Design)</label><br>
+        <label><input type="checkbox" name="subjects" value="">Music (Instrumental or Vocal)</label><br>
+        <label><input type="checkbox" name="subjects" value="">Theatre and Drama</label><br>
+        <label><input type="checkbox" name="subjects" value="">Fashion Designing</label><br>
+        <label><input type="checkbox" name="subjects" value="">Animation and Multimedia</label><br>
+        <label><input type="checkbox" name="subjects" value="">Film Making and Photography</label><br>
+    </div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="question7">
+    <p>7. Are you inclined towards studying languages and literature?</p>
+    <div class="options">
+        <label><input type="checkbox" name="subjects" value="">Languages (English, Foreign Languages such as French, Spanish, German)</label><br>
+        <label><input type="checkbox" name="subjects" value="">Literature and Creative Writing</label><br>
+        <label><input type="checkbox" name="subjects" value="">Journalism and Mass Communication</label><br>
+        <label><input type="checkbox" name="subjects" value="">Linguistics and Language Studies</label><br>
+        <label><input type="checkbox" name="subjects" value="">Translation and Interpretation</label><br>
+        <label><input type="checkbox" name="subjects" value="">Library Science</label><br>
+    </div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="question8">
+    <p>8. Do you enjoy researching and writing about historical events and social issues?</p>
+    <div class="options">
+        <label><input type="checkbox" name="subjects" value="">History (Archaeology, Ancient History, Modern History)</label><br>
+        <label><input type="checkbox" name="subjects" value="">Political Science and International Relations</label><br>
+        <label><input type="checkbox" name="subjects" value="">Sociology</label><br>
+        <label><input type="checkbox" name="subjects" value="">Anthropology</label><br>
+        <label><input type="checkbox" name="subjects" value="">Social Work</label><br>
+        <label><input type="checkbox" name="subjects" value="">Law</label><br>
+    </div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="question9">
+    <p>9. Are you interested in understanding how businesses operate and how the economy works?</p>
+    <div class="options">
+        <label><input type="checkbox" name="subjects" value="">Commerce (Accountancy, Business Studies, Economics)</label><br>
+        <label><input type="checkbox" name="subjects" value="">Management Studies</label><br>
+        <label><input type="checkbox" name="subjects" value="">Finance and Investment</label><br>
+        <label><input type="checkbox" name="subjects" value="">Marketing and Advertising</label><br>
+        <label><input type="checkbox" name="subjects" value="">Entrepreneurship</label><br>
+        <label><input type="checkbox" name="subjects" value="">Hospitality and Tourism</label><br>
+    </div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="question10">
+    <p>10. Do you have a specific career or field of study in mind for your future?</p>
+    <div class="options">
+      <label><input type="checkbox" name="subjects" value="mathematics"> Mathematics</label><br>
+      <label><input type="checkbox" name="subjects" value="science"> Science</label><br>
+      <label><input type="checkbox" name="subjects" value="english"> English</label><br>
+      <label><input type="checkbox" name="subjects" value="socialstudies"> Social Studies</label><br>
+      <label><input type="checkbox" name="subjects" value="computerscience"> Computer Science</label><br>
+      <label><input type="checkbox" name="subjects" value="physicaleducation"> Physical Education</label><br>
+    </div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <!-- Repeat the above HTML block for remaining questions -->
+
+  <div id="result">
+    <h2>Results</h2>
+    <p id="selectedInterests"></p>
+  </div>
+
+  <script>
+    var currentQuestion = 1;
+    var interests = [];
+
+    function nextQuestion() {
+      var selectedSubjects = document.querySelectorAll('input[name="subjects"]:checked');
+      var selectedInterests = [];
+      for (var i = 0; i < selectedSubjects.length; i++) {
+        selectedInterests.push(selectedSubjects[i].value);
+      }
+      interests.push(selectedInterests);
+
+      var currentQuestionDiv = document.getElementById("question" + currentQuestion);
+      currentQuestionDiv.style.display = "none";
+      currentQuestion++;
+
+      var nextQuestionDiv = document.getElementById("question" + currentQuestion);
+      if (nextQuestionDiv) {
+        nextQuestionDiv.style.display = "block";
+      } else {
+        showResults();
+      }
+    }
+
+    function showResults() {
+      var resultDiv = document.getElementById("result");
+      var selectedInterests = interests.flat();
+      var interestsString = selectedInterests.join(", ");
+      document.getElementById("selectedInterests").textContent = interestsString;
+      resultDiv.style.display = "block";
+    }
+  </script>
+</body>
+</html>

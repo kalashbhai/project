@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self Evaluation Test</title>
+  <link rel="stylesheet" href="../webStylesheets/styleBeginTest.css">
+  <script src="../jsfiles/beginTestScript.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="company-name">Career Guru</div>
+    <nav class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="#services">Services</a>
+      <a href="#self-evaluation">Self Evaluation</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <table id="assessment-table">
+    <thead>
+      <tr>
+        <th>S.NO</th>
+        <th>Assessment</th>
+        <th>Progress</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>01</td>
+        <td>Interest</td>
+        <td id="progress-1">Pending</td>
+        <td><a href="interest.html"><button onclick="startAssessment(1)">Start Test</button></a>
+        </td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>Personality</td>
+        <td id="progress-2">Pending</td>
+        <td><button onclick="startAssessment(2)">Start Test</button></td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>Ability-Verbal</td>
+        <td id="progress-3">Pending</td>
+        <td><button onclick="startAssessment(3)">Start Test</button></td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>Ability-Numericals</td>
+        <td id="progress-4">Pending</td>
+        <td><button onclick="startAssessment(4)">Start Test</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    <p>&copy; 2023 Career Guru. All rights reserved.</p>
+  </footer>
+
+  <!-- <script src="jsfiles/testStatus.js"></script> -->
+</body>
+
+</html>
