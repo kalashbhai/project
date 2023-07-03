@@ -7,19 +7,19 @@
       font-family: Arial, sans-serif;
       margin: 20px;
     }
-    
+
     h1 {
       margin-bottom: 20px;
     }
-    
+
     .question {
       margin-bottom: 10px;
     }
-    
+
     .options {
       margin-bottom: 20px;
     }
-    
+
     button {
       padding: 10px 20px;
       font-size: 16px;
@@ -28,11 +28,11 @@
       border: none;
       cursor: pointer;
     }
-    
+
     button:hover {
       background-color: #45a049;
     }
-    
+
     #result {
       margin-top: 20px;
       display: none;
@@ -41,7 +41,7 @@
 </head>
 <body>
   <h1>Interest Assessment</h1>
-  
+
   <div class="question" id="question1">
     <p>1. What subjects do you enjoy the most in your current classes?</p>
     <div class="options">
@@ -71,8 +71,8 @@
   <div class="question" id="question3">
     <p>3. Do you prefer working with your hands or working with ideas and concepts?</p>
     <div class="options">
-        <label><input type="checkbox" name="subjects" value="">Working with hands: Engineering, Carpentry, Fashion Designing, Culinary Arts, Automotive Technology, Horticulture</label><br>
-        <label><input type="checkbox" name="subjects" value="">Working with ideas and concepts: Science Research, Mathematics, Architecture, Journalism, Psychology, Software Development</label><br>
+        <label><input type="checkbox" name="subjects" value="mannual work">Working with hands: Engineering, Carpentry, Fashion Designing, Culinary Arts, Automotive Technology, Horticulture</label><br>
+        <label><input type="checkbox" name="subjects" value="brain work">Working with ideas and concepts: Science Research, Mathematics, Architecture, Journalism, Psychology, Software Development</label><br>
     </div>
     <button onclick="nextQuestion()">Next</button>
   </div>
