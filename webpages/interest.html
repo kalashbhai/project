@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Interest Assessment</title>
   <style>
@@ -35,176 +36,287 @@
 
     #result {
       margin-top: 20px;
-      display: none;
     }
   </style>
 </head>
+
 <body>
   <h1>Interest Assessment</h1>
 
   <div class="question" id="question1">
     <p>1. What subjects do you enjoy the most in your current classes?</p>
     <div class="options">
-      <label><input type="checkbox" name="subjects" value="mathematics"> Mathematics</label><br>
-      <label><input type="checkbox" name="subjects" value="science"> Science</label><br>
-      <label><input type="checkbox" name="subjects" value="english"> English</label><br>
-      <label><input type="checkbox" name="subjects" value="socialstudies"> Social Studies</label><br>
-      <label><input type="checkbox" name="subjects" value="computerscience"> Computer Science</label><br>
-      <label><input type="checkbox" name="subjects" value="physicaleducation"> Physical Education</label><br>
+      <label><input type="checkbox" name="subjects" value="mathematics" onclick="ShowselectItems(this)">
+        Mathematics</label><br>
+      <label><input type="checkbox" name="subjects" value="science" onclick="ShowselectItems(this)"> Science</label><br>
+      <label><input type="checkbox" name="subjects" value="english" onclick="ShowselectItems(this)"> English</label><br>
+      <label><input type="checkbox" name="subjects" value="socialstudies" onclick="ShowselectItems(this)"> Social
+        Studies</label><br>
+      <label><input type="checkbox" name="subjects" value="computerscience" onclick="ShowselectItems(this)"> Computer
+        Science</label><br>
+      <label><input type="checkbox" name="subjects" value="physicaleducation" onclick="ShowselectItems(this)"> Physical
+        Education</label><br>
     </div>
-    <button onclick="nextQuestion()">Next</button>
+    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question2">
     <p>2. Which activities or hobbies are you most passionate about outside of school?</p>
     <div class="options">
-        <label><input type="checkbox" name="subjects" value="Sports">Sports (Football, Basketball, Cricket, Tennis, etc.)</label><br>
-        <label><input type="checkbox" name="subjects" value="Music">Music (Playing an instrument, singing, composing)</label><br>
-        <label><input type="checkbox" name="subjects" value="Art">Art (Drawing, painting, sculpting)</label><br>
-        <label><input type="checkbox" name="subjects" value="Writing">Writing (Poetry, short stories, blogging)</label><br>
-        <label><input type="checkbox" name="subjects" value="Debate">Debate or Public Speaking</label><br>
-        <label><input type="checkbox" name="subjects" value="Service">Volunteering or community service</label><br>
+      <label><input type="checkbox" name="subjects" value="Sports" onclick="ShowselectItems(this)">Sports (Football,
+        Basketball, Cricket, Tennis, etc.)</label><br>
+      <label><input type="checkbox" name="subjects" value="Music" onclick="ShowselectItems(this)">Music (Playing an
+        instrument, singing, composing)</label><br>
+      <label><input type="checkbox" name="subjects" value="Creativity" onclick="ShowselectItems(this)">Art (Drawing,
+        painting, sculpting)</label><br>
+      <label><input type="checkbox" name="subjects" value="Writing" onclick="ShowselectItems(this)">Writing (Poetry,
+        short stories, blogging)</label><br>
+      <label><input type="checkbox" name="subjects" value="Debate" onclick="ShowselectItems(this)">Debate or Public
+        Speaking</label><br>
+      <label><input type="checkbox" name="subjects" value="Social Service" onclick="ShowselectItems(this)">Volunteering
+        or community service</label><br>
     </div>
-    <button onclick="nextQuestion()">Next</button>
+    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question3">
     <p>3. Do you prefer working with your hands or working with ideas and concepts?</p>
     <div class="options">
-        <label><input type="checkbox" name="subjects" value="mannual work">Working with hands: Engineering, Carpentry, Fashion Designing, Culinary Arts, Automotive Technology, Horticulture</label><br>
-        <label><input type="checkbox" name="subjects" value="brain work">Working with ideas and concepts: Science Research, Mathematics, Architecture, Journalism, Psychology, Software Development</label><br>
+      <label><input type="checkbox" name="subjects" value="mannual work" onclick="ShowselectItems(this)">Working with
+        hands: Engineering, Carpentry, Fashion Designing, Culinary Arts, Automotive Technology, Horticulture</label><br>
+      <label><input type="checkbox" name="subjects" value="brain work" onclick="ShowselectItems(this)">Working with
+        ideas and concepts: Science Research, Mathematics, Architecture, Journalism, Psychology, Software
+        Development</label><br>
     </div>
-    <button onclick="nextQuestion()">Next</button>
+    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question4">
     <p>4. Are you interested in solving mathematical problems and equations?</p>
     <div class="options">
-        <label><input type="checkbox" name="subjects" value="Engineering">Engineering (Civil, Mechanical, Electrical)</label><br>
-        <label><input type="checkbox" name="subjects" value="mathematics">Mathematics (Pure Mathematics, Applied Mathematics)</label><br>
-        <label><input type="checkbox" name="subjects" value="Finance">Economics and Finance</label><br>
-        <label><input type="checkbox" name="subjects" value="data Analysis">Statistics and Data Analysis</label><br>
-        <label><input type="checkbox" name="subjects" value="computer science">Computer Science</label><br>
+      <label><input type="checkbox" name="subjects" value="Engineering" onclick="ShowselectItems(this)">Engineering
+        (Civil, Mechanical, Electrical)</label><br>
+      <label><input type="checkbox" name="subjects" value="mathematics" onclick="ShowselectItems(this)">Mathematics
+        (Pure Mathematics, Applied Mathematics)</label><br>
+      <label><input type="checkbox" name="subjects" value="Finance" onclick="ShowselectItems(this)">Economics and
+        Finance</label><br>
+      <label><input type="checkbox" name="subjects" value="data Analysis" onclick="ShowselectItems(this)">Statistics and
+        Data Analysis</label><br>
+      <label><input type="checkbox" name="subjects" value="computer science" onclick="ShowselectItems(this)">Computer
+        Science</label><br>
     </div>
-    <button onclick="nextQuestion()">Next</button>
+    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question5">
     <p>5. Do you enjoy conducting experiments and exploring scientific concepts?</p>
     <div class="options">
-        <label><input type="checkbox" name="subjects" value="">Medicine and Healthcare</label><br>
-        <label><input type="checkbox" name="subjects" value="">Biotechnology and Genetics</label><br>
-        <label><input type="checkbox" name="subjects" value="">Environmental Science</label><br>
-        <label><input type="checkbox" name="subjects" value="">Pharmacy</label><br>
-        <label><input type="checkbox" name="subjects" value="">Forensic Science</label><br>
-        <label><input type="checkbox" name="subjects" value="">Agricultural Sciences</label><br>
+      <label><input type="checkbox" name="subjects" value="Healthcare" onclick="ShowselectItems(this)">Medicine and
+        Healthcare</label><br>
+      <label><input type="checkbox" name="subjects" value="Biotechnology" onclick="ShowselectItems(this)">Biotechnology
+        and Genetics</label><br>
+      <label><input type="checkbox" name="subjects" value="Environmental Science"
+          onclick="ShowselectItems(this)">Environmental Science</label><br>
+      <label><input type="checkbox" name="subjects" value="Pharmacy"
+          onclick="ShowselectItems(this)">Pharmacy</label><br>
+      <label><input type="checkbox" name="subjects" value="Forensic Science" onclick="ShowselectItems(this)">Forensic
+        Science</label><br>
+      <label><input type="checkbox" name="subjects" value="Agricultural Sciences"
+          onclick="ShowselectItems(this)">Agricultural Sciences</label><br>
     </div>
-    <button onclick="nextQuestion()">Next</button>
+    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question6">
     <p>6. Are you drawn to creative arts such as drawing, painting, or playing a musical instrument?</p>
     <div class="options">
-        <label><input type="checkbox" name="subjects" value="">Fine Arts (Painting, Sculpture, Graphic Design)</label><br>
-        <label><input type="checkbox" name="subjects" value="">Music (Instrumental or Vocal)</label><br>
-        <label><input type="checkbox" name="subjects" value="">Theatre and Drama</label><br>
-        <label><input type="checkbox" name="subjects" value="">Fashion Designing</label><br>
-        <label><input type="checkbox" name="subjects" value="">Animation and Multimedia</label><br>
-        <label><input type="checkbox" name="subjects" value="">Film Making and Photography</label><br>
+      <label><input type="checkbox" name="subjects" value="Fine Arts" onclick="ShowselectItems(this)">Fine Arts
+        (Painting, Sculpture, Graphic Design)</label><br>
+      <label><input type="checkbox" name="subjects" value="Music" onclick="ShowselectItems(this)">Music (Instrumental or
+        Vocal)</label><br>
+      <label><input type="checkbox" name="subjects" value="Theatre and Drama" onclick="ShowselectItems(this)">Theatre
+        and Drama</label><br>
+      <label><input type="checkbox" name="subjects" value="Fashion Designing" onclick="ShowselectItems(this)">Fashion
+        Designing</label><br>
+      <label><input type="checkbox" name="subjects" value="Animation and Multimedia"
+          onclick="ShowselectItems(this)">Animation and Multimedia</label><br>
+      <label><input type="checkbox" name="subjects" value="Film Making and Photography"
+          onclick="ShowselectItems(this)">Film Making and Photography</label><br>
     </div>
-    <button onclick="nextQuestion()">Next</button>
+    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question7">
     <p>7. Are you inclined towards studying languages and literature?</p>
     <div class="options">
-        <label><input type="checkbox" name="subjects" value="">Languages (English, Foreign Languages such as French, Spanish, German)</label><br>
-        <label><input type="checkbox" name="subjects" value="">Literature and Creative Writing</label><br>
-        <label><input type="checkbox" name="subjects" value="">Journalism and Mass Communication</label><br>
-        <label><input type="checkbox" name="subjects" value="">Linguistics and Language Studies</label><br>
-        <label><input type="checkbox" name="subjects" value="">Translation and Interpretation</label><br>
-        <label><input type="checkbox" name="subjects" value="">Library Science</label><br>
+      <label><input type="checkbox" name="subjects" value="Languages" onclick="ShowselectItems(this)">Languages
+        (English, Foreign Languages such as French, Spanish, German)</label><br>
+      <label><input type="checkbox" name="subjects" value="Literature and Creative Writing"
+          onclick="ShowselectItems(this)">Literature and Creative Writing</label><br>
+      <label><input type="checkbox" name="subjects" value="Journalism and Mass Communication"
+          onclick="ShowselectItems(this)">Journalism and Mass Communication</label><br>
+      <label><input type="checkbox" name="subjects" value="Linguistics and Language Studies"
+          onclick="ShowselectItems(this)">Linguistics and Language Studies</label><br>
+      <label><input type="checkbox" name="subjects" value="Translation and Interpretation"
+          onclick="ShowselectItems(this)">Translation and Interpretation</label><br>
+      <label><input type="checkbox" name="subjects" value="Library Science" onclick="ShowselectItems(this)">Library
+        Science</label><br>
     </div>
-    <button onclick="nextQuestion()">Next</button>
+    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question8">
     <p>8. Do you enjoy researching and writing about historical events and social issues?</p>
     <div class="options">
-        <label><input type="checkbox" name="subjects" value="">History (Archaeology, Ancient History, Modern History)</label><br>
-        <label><input type="checkbox" name="subjects" value="">Political Science and International Relations</label><br>
-        <label><input type="checkbox" name="subjects" value="">Sociology</label><br>
-        <label><input type="checkbox" name="subjects" value="">Anthropology</label><br>
-        <label><input type="checkbox" name="subjects" value="">Social Work</label><br>
-        <label><input type="checkbox" name="subjects" value="">Law</label><br>
+      <label><input type="checkbox" name="subjects" value="History" onclick="ShowselectItems(this)">History
+        (Archaeology, Ancient History, Modern History)</label><br>
+      <label><input type="checkbox" name="subjects" value="Political Science and International Relations"
+          onclick="ShowselectItems(this)">Political Science and International Relations</label><br>
+      <label><input type="checkbox" name="subjects" value="Sociology"
+          onclick="ShowselectItems(this)">Sociology</label><br>
+      <label><input type="checkbox" name="subjects" value="Anthropology"
+          onclick="ShowselectItems(this)">Anthropology</label><br>
+      <label><input type="checkbox" name="subjects" value="Social Work" onclick="ShowselectItems(this)">Social
+        Work</label><br>
+      <label><input type="checkbox" name="subjects" value="Law" onclick="ShowselectItems(this)">Law</label><br>
     </div>
-    <button onclick="nextQuestion()">Next</button>
+    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question9">
     <p>9. Are you interested in understanding how businesses operate and how the economy works?</p>
     <div class="options">
-        <label><input type="checkbox" name="subjects" value="">Commerce (Accountancy, Business Studies, Economics)</label><br>
-        <label><input type="checkbox" name="subjects" value="">Management Studies</label><br>
-        <label><input type="checkbox" name="subjects" value="">Finance and Investment</label><br>
-        <label><input type="checkbox" name="subjects" value="">Marketing and Advertising</label><br>
-        <label><input type="checkbox" name="subjects" value="">Entrepreneurship</label><br>
-        <label><input type="checkbox" name="subjects" value="">Hospitality and Tourism</label><br>
+      <label><input type="checkbox" name="subjects" value="Commerce" onclick="ShowselectItems(this)">Commerce
+        (Accountancy, Business Studies, Economics)</label><br>
+      <label><input type="checkbox" name="subjects" value="Management Studies"
+          onclick="ShowselectItems(this)">Management Studies</label><br>
+      <label><input type="checkbox" name="subjects" value="Finance and Investment"
+          onclick="ShowselectItems(this)">Finance and Investment</label><br>
+      <label><input type="checkbox" name="subjects" value="Marketing and Advertising"
+          onclick="ShowselectItems(this)">Marketing and Advertising</label><br>
+      <label><input type="checkbox" name="subjects" value="Entrepreneurship"
+          onclick="ShowselectItems(this)">Entrepreneurship</label><br>
+      <label><input type="checkbox" name="subjects" value="Hospitality and Tourism"
+          onclick="ShowselectItems(this)">Hospitality and Tourism</label><br>
     </div>
-    <button onclick="nextQuestion()">Next</button>
+    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
-  <div class="question" id="question10">
+  <!-- <div class="question" id="question10">
     <p>10. Do you have a specific career or field of study in mind for your future?</p>
     <div class="options">
-      <label><input type="checkbox" name="subjects" value="mathematics"> Mathematics</label><br>
-      <label><input type="checkbox" name="subjects" value="science"> Science</label><br>
-      <label><input type="checkbox" name="subjects" value="english"> English</label><br>
-      <label><input type="checkbox" name="subjects" value="socialstudies"> Social Studies</label><br>
-      <label><input type="checkbox" name="subjects" value="computerscience"> Computer Science</label><br>
-      <label><input type="checkbox" name="subjects" value="physicaleducation"> Physical Education</label><br>
-    </div>
-    <button onclick="nextQuestion()">Next</button>
+      <label><input type="checkbox" name="subjects" value="mathematics" onclick="ShowselectItems(this)"> Mathematics</label><br>
+      <label><input type="checkbox" name="subjects" value="science" onclick="ShowselectItems(this)"> Science</label><br>
+      <label><input type="checkbox" name="subjects" value="english" onclick="ShowselectItems(this)"> English</label><br>
+      <label><input type="checkbox" name="subjects" value="socialstudies" onclick="ShowselectItems(this)"> Social Studies</label><br>
+      <label><input type="checkbox" name="subjects" value="computerscience" onclick="ShowselectItems(this)"> Computer Science</label><br>
+      <label><input type="checkbox" name="subjects" value="physicaleducation" onclick="ShowselectItems(this)"> Physical Education</label><br>
+    </div> -->
+
+
+  <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
+  <button type="submit" onclick="ShowOutput()">Submit</button>
+
 
   <!-- Repeat the above HTML block for remaining questions -->
 
   <div id="result">
     <h2>Results</h2>
-    <p id="selectedInterests"></p>
+    <h3 id="selectedInterests">hello</h3>
   </div>
 
+
   <script>
-    var currentQuestion = 1;
-    var interests = [];
+    // var currentQuestion = 1;
+    // var interests = [];
+    const selectedItems = [];
 
-    function nextQuestion() {
-      var selectedSubjects = document.querySelectorAll('input[name="subjects"]:checked');
-      var selectedInterests = [];
-      for (var i = 0; i < selectedSubjects.length; i++) {
-        selectedInterests.push(selectedSubjects[i].value);
+    // const arr = ["mathematics", "science", "english", "socialstudies", "computerscience", "physicaleducation", "Sports", "Music", "Creativity", "Creativity", "Creativity", "Writing", "Debate", "Social Service", "mannual work", "brain work", "Engineering", "mathematics", "Finance", "data Analysis", "computer science", "Healthcare", "Biotechnology", "Biotechnology", "Biotechnology", "Environmental Science", "Pharmacy", "Forensic Science", "Agricultural Sciences", "Fine Arts", "Music", "Theatre and Drama", "Fashion Designing", "Animation and Multimedia", "Film Making and Photography", "Languages", "Languages", "Languages", "Literature and Creative Writing", "Journalism and Mass Communication", "Linguistics and Language Studies", "Translation and Interpretation", "Library Science", "History", "Political Science and International Relations", "Sociology", "Sociology", "Sociology", "Law", "Social Work", "Anthropology", "Commerce", "Management Studies", "Finance and Investment", "Marketing and Advertising", "Entrepreneurship", "Hospitality and Tourism"];
+
+    // Define the five groups
+    const groups = {
+      STEM: ["mathematics", "science", "computerscience", "engineering", "biotechnology", "environmental science", "healthcare", "pharmacy", "forensic science", "agricultural sciences"],
+      HumanitiesAndSocialSciences: ["english", "socialstudies", "history", "political science and international relations", "sociology", "anthropology", "linguistics and language studies", "translation and interpretation", "literature and creative writing", "journalism and mass communication", "library science", "law", "social work"],
+      ArtsAndCreativeFields: ["music", "creativity", "writing", "debate", "fine arts", "theatre and drama", "fashion designing", "animation and multimedia", "film making and photography"],
+      BusinessAndCommerce: ["finance", "data analysis", "commerce", "management studies", "marketing and advertising", "entrepreneurship", "hospitality and tourism"],
+      SportsAndPhysicalEducation: ["physicaleducation", "sports"]
+    };
+
+    // Create an empty object to store the results
+    const result = {};
+
+    // Iterate over the array
+
+
+
+    // function nextQuestion() {
+    //   var selectedSubjects = document.querySelectorAll('input[name="subjects"]:checked');
+    //   var selectedInterests = [];
+    //   for (var i = 0; i < selectedSubjects.length; i++) {
+    //     selectedInterests.push(selectedSubjects[i].value);
+    //   }
+    //   interests.push(selectedInterests);
+
+    //   var currentQuestionDiv = document.getElementById("question" + currentQuestion);
+    //   currentQuestionDiv.style.display = "none";
+    //   currentQuestion++;
+
+    //   var nextQuestionDiv = document.getElementById("question" + currentQuestion);
+    //   if (nextQuestionDiv) {
+    //     nextQuestionDiv.style.display = "block";
+    //   } else {
+    //     showResults();
+    //   }
+    // }
+
+    // function showResults() {
+    //   var resultDiv = document.getElementById("result");
+    //   var selectedInterests = interests.flat();
+    //   var interestsString = selectedInterests.join(", ");
+    //   document.getElementById("selectedInterests").textContent = interestsString;
+    //   resultDiv.style.display = "block";
+    // }
+
+
+
+    function ShowOutput() {
+      var resultDiv = document.getElementById("selectedInterests");
+      resultDiv.innerHTML = selectedItems.join(", "); // Replace the content with selected items joined by commas
+
+      console.log(selectedItems);
+
+      selectedItems.forEach(value => {
+        let found = false;
+        // Check which group the value belongs to
+        for (const groupName in groups) {
+          if (groups[groupName].includes(value.toLowerCase())) {
+            found = true;
+            result[value] = groupName;
+            break;
+          }
+        }
+        // If the value doesn't belong to any group, categorize it as "Other"
+        if (!found) {
+          result[value] = "Other";
+        }
+      });
+
+      // Print the results
+      for (const value in result) {
+        console.log(value + ": " + result[value]);
       }
-      interests.push(selectedInterests);
 
-      var currentQuestionDiv = document.getElementById("question" + currentQuestion);
-      currentQuestionDiv.style.display = "none";
-      currentQuestion++;
 
-      var nextQuestionDiv = document.getElementById("question" + currentQuestion);
-      if (nextQuestionDiv) {
-        nextQuestionDiv.style.display = "block";
-      } else {
-        showResults();
-      }
     }
 
-    function showResults() {
-      var resultDiv = document.getElementById("result");
-      var selectedInterests = interests.flat();
-      var interestsString = selectedInterests.join(", ");
-      document.getElementById("selectedInterests").textContent = interestsString;
-      resultDiv.style.display = "block";
+
+    function ShowselectItems(props) {
+      console.log(props);
+      selectedItems.push(props.value);
+      console.log(selectedItems.length)
     }
   </script>
 </body>
+
 </html>
