@@ -57,7 +57,6 @@
       <label><input type="checkbox" name="subjects" value="physicaleducation" onclick="ShowselectItems(this)"> Physical
         Education</label><br>
     </div>
-    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question2">
@@ -76,7 +75,6 @@
       <label><input type="checkbox" name="subjects" value="Social Service" onclick="ShowselectItems(this)">Volunteering
         or community service</label><br>
     </div>
-    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question3">
@@ -88,7 +86,6 @@
         ideas and concepts: Science Research, Mathematics, Architecture, Journalism, Psychology, Software
         Development</label><br>
     </div>
-    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question4">
@@ -105,7 +102,6 @@
       <label><input type="checkbox" name="subjects" value="computer science" onclick="ShowselectItems(this)">Computer
         Science</label><br>
     </div>
-    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question5">
@@ -124,7 +120,6 @@
       <label><input type="checkbox" name="subjects" value="Agricultural Sciences"
           onclick="ShowselectItems(this)">Agricultural Sciences</label><br>
     </div>
-    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question6">
@@ -143,7 +138,6 @@
       <label><input type="checkbox" name="subjects" value="Film Making and Photography"
           onclick="ShowselectItems(this)">Film Making and Photography</label><br>
     </div>
-    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question7">
@@ -162,7 +156,6 @@
       <label><input type="checkbox" name="subjects" value="Library Science" onclick="ShowselectItems(this)">Library
         Science</label><br>
     </div>
-    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question8">
@@ -180,7 +173,6 @@
         Work</label><br>
       <label><input type="checkbox" name="subjects" value="Law" onclick="ShowselectItems(this)">Law</label><br>
     </div>
-    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
   <div class="question" id="question9">
@@ -199,27 +191,11 @@
       <label><input type="checkbox" name="subjects" value="Hospitality and Tourism"
           onclick="ShowselectItems(this)">Hospitality and Tourism</label><br>
     </div>
-    <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
 
-  <!-- <div class="question" id="question10">
-    <p>10. Do you have a specific career or field of study in mind for your future?</p>
-    <div class="options">
-      <label><input type="checkbox" name="subjects" value="mathematics" onclick="ShowselectItems(this)"> Mathematics</label><br>
-      <label><input type="checkbox" name="subjects" value="science" onclick="ShowselectItems(this)"> Science</label><br>
-      <label><input type="checkbox" name="subjects" value="english" onclick="ShowselectItems(this)"> English</label><br>
-      <label><input type="checkbox" name="subjects" value="socialstudies" onclick="ShowselectItems(this)"> Social Studies</label><br>
-      <label><input type="checkbox" name="subjects" value="computerscience" onclick="ShowselectItems(this)"> Computer Science</label><br>
-      <label><input type="checkbox" name="subjects" value="physicaleducation" onclick="ShowselectItems(this)"> Physical Education</label><br>
-    </div> -->
-
-
-  <!-- <button onclick="nextQuestion()">Next</button> -->
   </div>
   <button type="submit" onclick="ShowOutput()">Submit</button>
 
-
-  <!-- Repeat the above HTML block for remaining questions -->
 
   <div id="result">
     <h2>Results</h2>
@@ -228,8 +204,6 @@
 
 
   <script>
-    // var currentQuestion = 1;
-    // var interests = [];
     const selectedItems = [];
 
     // const arr = ["mathematics", "science", "english", "socialstudies", "computerscience", "physicaleducation", "Sports", "Music", "Creativity", "Creativity", "Creativity", "Writing", "Debate", "Social Service", "mannual work", "brain work", "Engineering", "mathematics", "Finance", "data Analysis", "computer science", "Healthcare", "Biotechnology", "Biotechnology", "Biotechnology", "Environmental Science", "Pharmacy", "Forensic Science", "Agricultural Sciences", "Fine Arts", "Music", "Theatre and Drama", "Fashion Designing", "Animation and Multimedia", "Film Making and Photography", "Languages", "Languages", "Languages", "Literature and Creative Writing", "Journalism and Mass Communication", "Linguistics and Language Studies", "Translation and Interpretation", "Library Science", "History", "Political Science and International Relations", "Sociology", "Sociology", "Sociology", "Law", "Social Work", "Anthropology", "Commerce", "Management Studies", "Finance and Investment", "Marketing and Advertising", "Entrepreneurship", "Hospitality and Tourism"];
@@ -246,39 +220,27 @@
     // Create an empty object to store the results
     const result = {};
 
-    // Iterate over the array
+    function countOccurrences(arr) {
+      var occurrences = {
+        SportsAndPhysicalEducation: 0,
+        BusinessAndCommerce: 0,
+        ArtsAndCreativeFields: 0,
+        HumanitiesAndSocialSciences: 0,
+        STEM: 0
+      };
 
+      // Iterate over the array
+      for (var i = 0; i < arr.length; i++) {
+        var value = arr[i];
 
+        // If the value is one of the specific categories, increment its count
+        if (value in occurrences) {
+          occurrences[value]++;
+        }
+      }
 
-    // function nextQuestion() {
-    //   var selectedSubjects = document.querySelectorAll('input[name="subjects"]:checked');
-    //   var selectedInterests = [];
-    //   for (var i = 0; i < selectedSubjects.length; i++) {
-    //     selectedInterests.push(selectedSubjects[i].value);
-    //   }
-    //   interests.push(selectedInterests);
-
-    //   var currentQuestionDiv = document.getElementById("question" + currentQuestion);
-    //   currentQuestionDiv.style.display = "none";
-    //   currentQuestion++;
-
-    //   var nextQuestionDiv = document.getElementById("question" + currentQuestion);
-    //   if (nextQuestionDiv) {
-    //     nextQuestionDiv.style.display = "block";
-    //   } else {
-    //     showResults();
-    //   }
-    // }
-
-    // function showResults() {
-    //   var resultDiv = document.getElementById("result");
-    //   var selectedInterests = interests.flat();
-    //   var interestsString = selectedInterests.join(", ");
-    //   document.getElementById("selectedInterests").textContent = interestsString;
-    //   resultDiv.style.display = "block";
-    // }
-
-
+      return occurrences;
+    }
 
     function ShowOutput() {
       var resultDiv = document.getElementById("selectedInterests");
@@ -306,8 +268,8 @@
       for (const value in result) {
         console.log(value + ": " + result[value]);
       }
-
-
+      var final = countOccurrences(result);
+      console.log(final);
     }
 
 

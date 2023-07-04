@@ -41,10 +41,6 @@
       background-color: #45a049;
     }
 
-    /* #result {
-      margin-top: 20px;
-      display: none;
-    } */
   </style>
 </head>
 
@@ -57,15 +53,15 @@
       Remember, there are no right or wrong answers. This test aims to help
       you gain insights into your personality traits and interests.
     </p>
-    <h3>Section 1: Introversion vs. Extraversion</h3>
+    <h3 id="section1">Section 1: Introversion vs. Extraversion</h3>
     <div class="question" id="question1">
       <p>1. In social situations, I prefer to:</p>
       <div class="options">
         <label>
-          <input type="radio" name="option1" value="a">Interact with a large group of people.</input>
+          <input type="radio" name="optiona" value="a">Interact with a large group of people.</input>
         </label>
         <label>
-          <input type="radio" name="option1" value="b">Spend time with a few close friends or by myself.</input>
+          <input type="radio" name="optiona" value="b">Spend time with a few close friends or by myself.</input>
         </label>
       </div>
     </div>
@@ -74,10 +70,10 @@
       <p>2. When faced with a challenge, I am more likely to:</p>
       <div class="options">
         <label>
-          <input type="radio" name="option2" value="a" />Seek help and advice from others.
+          <input type="radio" name="optionb" value="a" />Seek help and advice from others.
         </label>
         <label>
-          <input type="radio" name="option2" value="b" />Solve the problem on my own.
+          <input type="radio" name="optionb" value="b" />Solve the problem on my own.
         </label>
       </div>
     </div>
@@ -86,24 +82,22 @@
       <p>3. I feel energized when:</p>
       <div class="options">
         <label>
-          <input type="radio" name="option3" value="a" />Surrounded by people and engaging in lively conversations.
+          <input type="radio" name="optionc" value="a" />Surrounded by people and engaging in lively conversations.
         </label>
         <label>
-          <input type="radio" name="option3" value="b" />Alone or in a quiet environment, pursuing my interests.
+          <input type="radio" name="optionc" value="b" />Alone or in a quiet environment, pursuing my interests.
         </label>
       </div>
     </div>
-    <h3>Section 2: Sensing vs. Intuition
-
-    </h3>
+    <h3 id="section2">Section 2: Sensing vs. Intuition</h3>
     <div class="question" id="question4">
       <p>4. I am more inclined to:</p>
       <div class="options">
         <label>
-          <input type="radio" name="option4" value="a" />Rely on concrete facts and details.
+          <input type="radio" name="optiond" value="a" />Rely on concrete facts and details.
         </label>
         <label>
-          <input type="radio" name="option4" value="b" />Trust my instincts and focus on possibilities.
+          <input type="radio" name="optiond" value="b" />Trust my instincts and focus on possibilities.
         </label>
       </div>
     </div>
@@ -113,10 +107,10 @@
       </p>
       <div class="options">
         <label>
-          <input type="radio" name="option5" value="a" />Practical hands-on experiences.
+          <input type="radio" name="optione" value="a" />Practical hands-on experiences.
         </label>
         <label>
-          <input type="radio" name="option5" value="b" />Theoretical concepts and abstract ideas.
+          <input type="radio" name="optione" value="b" />Theoretical concepts and abstract ideas.
         </label>
       </div>
     </div>
@@ -126,23 +120,23 @@
       </p>
       <div class="options">
         <label>
-          <input type="radio" name="option6" value="a" />Realistic and practical solutions.
+          <input type="radio" name="optionf" value="a" />Realistic and practical solutions.
         </label>
         <label>
-          <input type="radio" name="option6" value="b" />Innovative and unconventional approaches.
+          <input type="radio" name="optionf" value="b" />Innovative and unconventional approaches.
         </label>
       </div>
     </div>
-    <h3>Section 3: Thinking vs. Feeling</h3>
+    <h3 id="section3">Section 3: Thinking vs. Feeling</h3>
     <div class="question" id="question7">
       <p>7. When making decisions, I tend to rely more on:
       </p>
       <div class="options">
         <label>
-          <input type="radio" name="option7" value="a" />Logical reasoning and objective analysis.
+          <input type="radio" name="optiong" value="a" />Logical reasoning and objective analysis.
         </label>
         <label>
-          <input type="radio" name="option7" value="b" />Empathy and consideration for others' feelings.
+          <input type="radio" name="optiong" value="b" />Empathy and consideration for others' feelings.
         </label>
       </div>
     </div>
@@ -152,10 +146,10 @@
         " </p>
       <div class="options">
         <label>
-          <input type="radio" name="option8" value="a" />Honesty and fairness.
+          <input type="radio" name="optionh" value="a" />Honesty and fairness.
         </label>
         <label>
-          <input type="radio" name="option8" value="b" />Harmony and maintaining positive relationships.
+          <input type="radio" name="optionh" value="b" />Harmony and maintaining positive relationships.
         </label>
       </div>
     </div>
@@ -165,147 +159,194 @@
       </p>
       <div class="options">
         <label>
-          <input type="radio" name="option9" value="a" />Finding the most rational solution.
+          <input type="radio" name="optioni" value="a" />Finding the most rational solution.
         </label>
         <label>
-          <input type="radio" name="option9" value="b" />Preserving the emotional well-being of those involved.
+          <input type="radio" name="optioni" value="b" />Preserving the emotional well-being of those involved.
         </label>
 
       </div>
     </div>
-    <h3>Section 4: Judging vs. Perceiving</h3>
+    <h3 id="section4">Section 4: Judging vs. Perceiving</h3>
     <div class="question" id="question10">
       <p>10. I prefer a lifestyle that is:
       </p>
       <div class="options">
         <label>
-          <input type="radio" name="option10" value="a" />Structured and organized.
+          <input type="radio" name="optionj" value="a" />Structured and organized.
         </label>
         <label>
-          <input type="radio" name="option10" value="b" />Flexible and adaptable.
+          <input type="radio" name="optionj" value="b" />Flexible and adaptable.
         </label>
       </div>
     </div>
-    <div class="question" id="question10">
+    <div class="question" id="question11">
       <p>11. I feel more comfortable when:</p>
       <div class="options">
         <label>
-          <input type="radio" name="option11" value="a" />Plans and deadlines are set in advance.
+          <input type="radio" name="optionk" value="a" />Plans and deadlines are set in advance.
         </label>
         <label>
-          <input type="radio" name="option11" value="b" />I have the freedom to go with the flow.
+          <input type="radio" name="optionk" value="b" />I have the freedom to go with the flow.
         </label>
       </div>
     </div>
-    <div class="question" id="question10">
+    <div class="question" id="question12">
       <p>12. I enjoy:</p>
       <div class="options">
         <label>
-          <input type="radio" name="option12" value="a" />Completing tasks before moving on to new ones.
+          <input type="radio" name="optionl" value="a" />Completing tasks before moving on to new ones.
         </label>
         <label>
-          <input type="radio" name="option12" value="b" />Exploring multiple options and keeping my options open.
+          <input type="radio" name="optionl" value="b" />Exploring multiple options and keeping my options open.
         </label>
       </div>
     </div>
 
-    <button onclick="calculateResult()">Submit</button>
+    <button onclick="calculateResult(event)">Submit</button>
   </form>
-  <div id="result">
-    <h2>Result:</h2>
-    <p id="score"></p>
-</div>
+
+  <h4 id="selectedInterests">helo</h4>
 
   <script>
-    var currentQuestion = 1;
-    var interests = [];
-    function showResults() {
-      var resultDiv = document.getElementById("result");
-      var selectedInterests = interests.flat();
-      var interestsString = selectedInterests.join(", ");
-      document.getElementById("selectedInterests").textContent =
-        interestsString;
-      resultDiv.style.display = "block";
-    }
-    function calculateResult() {
-      // Add your scoring logic here
+    function calculateResult(event) {
+      event.preventDefault();
+  
       const form = document.getElementById("personalityForm");
       const formData = new FormData(form);
 
-      // Create variables to store scores for each section
-      let section1Score = 0;
+      let section1score = 0;
       let section2score = 0;
       let section3score = 0;
       let section4score = 0;
 
-      // Add other variables for other sections
-
-      // Iterate through the form data and calculate scores
       for (const entry of formData.entries()) {
         const [name, value] = entry;
-        if (name.startsWith("section1")) {
+        console.log(name);
+        console.log(value);
+
+        
+        if (name.startsWith("optiona")) {
           if (value === "a") {
-            section1Score += 1;
+            section1score += 1;
           } else if (value === "b") {
-            section1Score += 2;
+            section1score += 2;
           }
         }
-        if (name.startsWith("section2")) {
+        if (name.startsWith("optionb")) {
           if (value === "a") {
-            section2Score += 1;
+            section1score += 1;
           } else if (value === "b") {
-            section2Score += 2;
+            section1score += 2;
           }
         }
-        if (name.startsWith("section3")) {
+        if (name.startsWith("optionc")) {
           if (value === "a") {
-            section3Score += 1;
+            section1score += 1;
           } else if (value === "b") {
-            section3Score += 2;
+            section1score += 2;
           }
         }
-        if (name.startsWith("section4")) {
+        if (name.startsWith("optiond")) {
           if (value === "a") {
-            section4Score += 1;
+            section2score += 1;
           } else if (value === "b") {
-            section4Score += 2;
+            section2score += 2;
+          }
+        }
+        if (name.startsWith("optione")) {
+          if (value === "a") {
+            section2score += 1;
+          } else if (value === "b") {
+            section2score += 2;
+          }
+        }
+        if (name.startsWith("optionf")) {
+          if (value === "a") {
+            section2score += 1;
+          } else if (value === "b") {
+            section2score += 2;
+          }
+        }
+        if (name.startsWith("optiong")) {
+          if (value === "a") {
+            section3score += 1;
+          } else if (value === "b") {
+            section3score += 2;
+          }
+        }
+        if (name.startsWith("optionh")) {
+          if (value === "a") {
+            section3score += 1;
+          } else if (value === "b") {
+            section3score += 2;
+          }
+        }
+        if (name.startsWith("optioni")) {
+          if (value === "a") {
+            section3score += 1;
+          } else if (value === "b") {
+            section3score += 2;
+          }
+        }
+        if (name.startsWith("optionj")) {
+          if (value === "a") {
+            section4score += 1;
+          } else if (value === "b") {
+            section4score += 2;
+          }
+        }
+        if (name.startsWith("optionk")) {
+          if (value === "a") {
+            section4score += 1;
+          } else if (value === "b") {
+            section4score += 2;
+          }
+        }
+        if (name.startsWith("optionl")) {
+          if (value === "a") {
+            section4score += 1;
+          } else if (value === "b") {
+            section4score += 2;
           }
         }
       }
 
-      // Display the result based on scores
+     
       let personalityType1;
       let personalityType2;
       let personalityType3;
       let personalityType4;
 
-      if (section1Score >= 4) {
+      if (section1score >= 4) {
         personalityType1 = "You are more of an extrovert.";
       } else {
         personalityType1 = "You are more of an introvert.";
       }
-      if (section2Score >= 4) {
+      if (section2score >= 4) {
         personalityType2 = "You are sensible.";
       } else {
         personalityType2 = "You are intuitive.";
       }
-      if (section3Score >= 4) {
+      if (section3score >= 4) {
         personalityType3 = "You think more.";
       } else {
         personalityType3 = "You feel more.";
       }
-      if (section4Score >= 4) {
+      if (section4score >= 4) {
         personalityType4 = "You are jedgemental.";
       } else {
         personalityType4 = "You are adaptable.";
       }
-      // Add other result possibilities based on other sections' scores
 
-      // Display the result on the webpage
-      const resultDiv = document.getElementById("result");
-      const personalityTypeParagraph = document.getElementById("score");
-      personalityTypeParagraph.textContent = personalityType1+personalityType2+personalityType3+personalityType4;
-      resultDiv.style.display = "block";
+      var personalityTypeParagraph = document.getElementById("selectedInterests");
+      personalityTypeParagraph.textContent =
+        personalityType1 + "," +
+        personalityType2 + "," +
+        personalityType3 + "," +
+        personalityType4;
+
+       return false;
     }
   </script>
 </body>
